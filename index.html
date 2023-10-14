@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Break out</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="container">
+       
+        <div class="left-column">
+            <canvas id="canvas1" width="730" height="560" style="border: 10px solid #c8f4f8; animation: neon-border 1.5s infinite;"></canvas>
+        
+<style>
+    @keyframes neon-border {
+        0% {
+            border-color: #c8f4f8;
+        }
+        50% {
+            border-color: #7b99a7; /* Transition color */
+        }
+        100% {
+            border-color: #c8f4f8;
+        }
+    }
+    .neon1 {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      background-image: linear-gradient(45deg, #f06, #9f6, #09f, #f06);
+      background-size: 400% 400%;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: neon 3s linear infinite;
+      font-size: 16px; /* Reduced font size */
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      border: 2px solid rgb(84, 6, 54);/* Border for the table */
+      border-collapse: collapse; 
+      width: 448px;
+    }
+
+    /* Define a neon animation */
+    @keyframes neon1 {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 400% 400%;
+      }
+    }
+    .neon1 th, .neon1 td {
+      border: 1px solid rgb(84, 6, 54); /* Border for table cells */
+      padding: 8px; /* Add some padding */
+    }
+    .neon1 th {
+      background: rgb(162, 18, 150); /* Background color for table header */
+      color: #fff; /* Text color for table header */
+    }
+
+    .neon1 tbody tr {
+      background: rgb(126, 12, 111);/* Background color for table rows */
+      color: #fff; /* Text color for table rows */
+      
+    }
+
+    .neon1 th, .neon1 td {
+      font-weight: normal; /* Remove bold font for table cells */
+    }
+
+</style>
+        </div>
+        <div class="right-column">
+
+            
+            <img id="gameImage" src="MicrosoftTeams-image.png" alt="Image Description" width="450">
+
+            <br/><br/>
+            <form id="nameForm">
+                
+                <input type="text" id="username" placeholder="Enter the username" required>
+                <br/><br/>
+                <button type="submit">Start Game</button>
+            </form>
+            <button id="showTopScoresButton" style="display: none">Show Top Scores</button>
+            <table id="topScoresTable" class="neon1" style="display: none">
+              <thead>
+                <tr>
+                  <th>Username</th>
+                  <th>Score</th>
+                </tr>
+              </thead>
+              <tbody id="topScoresTableBody">
+                <!-- Scores will be displayed here -->
+              </tbody>
+            </table>
+            
+    </div>
+
+<script src="script.js">
+
+document.addEventListener('DOMContentLoaded', function () {
+    fetchTopScores();
+});
+</script>
+
+
+</body>
+</html>

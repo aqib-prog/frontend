@@ -1,0 +1,102 @@
+*{
+	padding: 0;
+	margin: 0;
+	
+}
+
+#canvas1 {
+	background: #eee;
+	display: block;
+	margin:auto;
+}
+/* Add the following CSS to your stylesheet or in a <style> tag in the <head> of your HTML document */
+
+/* Container to hold the canvas and form in a two-column layout */
+.container {
+    display: flex;
+    justify-content: space-between; /* Add space between the two columns */
+    text-align: left; /* Align the content within the container to the right */
+}
+
+/* Style the left column (canvas) */
+.left-column {
+    flex: 1; /* Allow the left column to grow and occupy available space */
+}
+
+/* Style the right column (form) */
+.right-column {
+    flex: 1; /* Allow the right column to grow and occupy available space */
+    margin-left: 10px; /* Add some margin for spacing between columns */
+}
+
+/* Style form elements */
+label {
+    display: block; /* Display labels as blocks for better alignment */
+    margin-bottom: 10px; /* Add spacing between label and input field */
+}
+
+
+@keyframes neon {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
+}
+input[type="text"] {
+	border: 2px solid transparent;
+	padding: 10px;
+	background: linear-gradient(45deg, #ff4a9b, #3b80d9, #e4e072);
+	background-size: 200% 100%;
+	color: rgb(186, 237, 241); /* Color of the input text */
+	font-weight: bold; /* Font weight of the input text */
+	font-family: 'Press Start 2P', cursive; /* Use the same gaming-style font */
+	transition: border 0.3s ease, background-position 0.3s ease; /* Add transition for border and background */
+    width:90%;
+	height:25px;
+}
+
+/* Style the input placeholder text */
+input[type="text"]::placeholder {
+	color: white; /* Color of the placeholder text (white) */
+	font-weight:800; /* Font weight of the placeholder text */
+	font-size:15px;
+}
+
+/* Adjust input styles on focus */
+input[type="text"]:focus {
+	outline: none; /* Remove the default focus outline */
+	border: 2px solid #fff; /* Add a white border on focus */
+	background-position: 100% 50%; /* Move background to the right on focus */
+}
+
+/* Style the button with a neon-like gradient background */
+button {
+	background: linear-gradient(45deg,#d633c8, #528fec);
+	background-size: 200% 100%;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	font-family: 'Press Start 2P', cursive; 
+	text-transform: uppercase; /* Convert text to uppercase */
+	font-weight: bold; 
+	font-size: 20px;
+	width: 95%;
+	height:41px;
+	animation: neon 2s linear infinite; /* Apply the neon animation */
+}
+
+/* Adjust button styles on hover */
+button:hover {
+	animation: none; /* Disable the neon animation on hover */
+	background: linear-gradient(45deg, #ff0, #f06, #ff0); /* Change colors on hover */
+}
+
+body{
+	background-color: rgb(38,12,46);
+}
+
+#canvas1 {
+	background-color: rgb(38,12,46);
+}
