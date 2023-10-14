@@ -244,7 +244,7 @@ function sendUserData(username, score) {
 
 // Function to fetch and display the top scores
 function fetchTopScores() {
-	fetch("https://brickbreakbackend.azurewebsites.net/api/submit-user-data/api/top-scores")
+	fetch("https://brickbreakbackend.azurewebsites.net/api/top-scores")
 	  .then((response) => {
 		if (!response.ok) {
 		  throw new Error('Network response was not ok');
