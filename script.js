@@ -221,7 +221,7 @@ function sendUserData(username, score) {
         score: score
     };
 
-    fetch("http://brickbreakbackend.azurewebsites.net/api/submit-user-data", {
+    fetch("https://brickbreakbackend.azurewebsites.net/api/submit-user-data", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
