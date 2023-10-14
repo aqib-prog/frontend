@@ -221,7 +221,7 @@ function sendUserData(username, score) {
         score: score
     };
 
-    fetch("http://localhost:3000/api/submit-user-data", {
+    fetch("http://brickbreakbackend.azurewebsites.net/api/submit-user-data", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -244,7 +244,7 @@ function sendUserData(username, score) {
 
 // Function to fetch and display the top scores
 function fetchTopScores() {
-	fetch("http://localhost:3000/api/top-scores")
+	fetch("http://brickbreakbackend.azurewebsites.net/api/submit-user-data/api/top-scores")
 	  .then((response) => {
 		if (!response.ok) {
 		  throw new Error('Network response was not ok');
