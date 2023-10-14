@@ -220,6 +220,7 @@ function sendUserData(username, score) {
         username: username,
         score: score
     };
+ console.log("Sending data:", data);
 
     fetch("https://brickbreakbackend.azurewebsites.net/api/submit-user-data", {
         method: "POST",
